@@ -1,60 +1,99 @@
-🔍 RoundcubeVulnScanner - Roundcube Webmail RCE Vulnerability Scanner 🔍  
-🚀 Professional Edition | 🛠️ Pentest Tool | ⚠️ Ethical Use Only  
+Tabii! Aşağıda, verdiğin içeriği daha profesyonel, temiz ve okunabilir bir `README.md` formatında düzenledim. İstersen bunu GitHub veya kendi dokümanlarında kullanabilirsin:
 
-📌 GitHub Repo: https://github.com/ebubekirbastama/RoundcubeVulnScanner  
+```markdown
+# 🔍 RoundcubeVulnScanner - Roundcube Webmail RCE Vulnerability Scanner 🔍
 
-📜 1. GENEL BAKIŞ  
----------------  
-Bu araç, Roundcube Webmail'deki kritik güvenlik açıklarını tarar:  
-✔️ Uzaktan Kod Çalıştırma (RCE)  
-✔️ CSV/HTML Enjeksiyonu  
-✔️ Kimlik Doğrulama Atlama  
-
-2. KURULUM
----------
-🔹 Python 3.8+ gereklidir.
-🔹 Bağımlılıkları yüklemek için:
-🔹 pip install -r requirements.txt
+🚀 **Professional Edition** | 🛠️ **Pentest Tool** | ⚠️ **Ethical Use Only**
 
 ---
 
-📸 Ekran Görüntüsü
+## 📌 Proje Hakkında
 
-![Ana Ekran](s11.png)
-![Ana Ekran](s12.png)
-![Ana Ekran](s13.png)
+Bu araç, Roundcube Webmail uygulamalarındaki kritik güvenlik açıklarını tarar:
+
+- ✔️ Uzaktan Kod Çalıştırma (RCE)  
+- ✔️ CSV/HTML Enjeksiyonu  
+- ✔️ Kimlik Doğrulama Atlama  
 
 ---
 
-3. KULLANIM
-----------
-Temel Kullanım:
+## 1. Kurulum
+
+- Python 3.8 ve üzeri gereklidir.  
+- Bağımlılıkları yüklemek için terminalde şu komutu çalıştırın:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## 2. Kullanım
+
+### Tek Hedef Tarama
+
+```bash
 python scanner.py -u https://webmail.hedefsite.com
+```
 
-Çoklu Tarama:
+### Çoklu Hedef Tarama
+
+```bash
 python scanner.py -f targets.txt -o report.json
+```
 
-Parametreler:
--u URL      : Tek hedef tarama
--f DOSYA    : Hedef listesi içeren dosya
--o RAPOR    : Sonuçları JSON olarak kaydetme
--t THREAD   : Thread sayısı (varsayılan: 5)
--v          : Detaylı mod
+### Parametreler
 
-⚠️ 4. YASAL UYARI
+| Parametre | Açıklama                      | Varsayılan   |
+|-----------|------------------------------|--------------|
+| `-u URL`  | Tek hedef URL                | -            |
+| `-f DOSYA`| Hedef URL listesi içeren dosya | -            |
+| `-o RAPOR`| Sonuçları JSON formatında kaydetme | -            |
+| `-t THREAD`| Thread sayısı                | 5            |
+| `-v`      | Detaylı çıktı modu           | Kapalı       |
 
-❗ BU ARAÇ YALNIZCA:
-✅ Yazılı izinli sistemlerde
-✅ Etik hackleme eğitimlerinde
-✅ Sorumlu açık bildirimi için kullanılabilir
+---
 
-🚨 İzinsiz kullanım TCK 243. madde ve GDPR'a göre suçtur!
+## 3. Ekran Görüntüleri
 
-5. ÖRNEK ÇIKTI
---------------
-[+] https://webmail.hedefsite.com:443 - VULNERABLE (CVE-2020-35730)<br>
+![Ana Ekran 1](s11.png)  
+![Ana Ekran 2](s12.png)  
+![Ana Ekran 3](s13.png)  
+
+---
+
+## 4. Yasal Uyarı
+
+**UYARI:** Bu araç yalnızca aşağıdaki durumlarda kullanılmalıdır:
+
+- ✅ Yazılı izin alınmış sistemlerde  
+- ✅ Etik hackleme ve eğitim amaçlı  
+- ✅ Sorumlu açık bildirim süreçlerinde  
+
+**İzinsiz kullanımlar** TCK 243. madde ve GDPR hükümlerine göre suç teşkil eder ve ciddi yaptırımlara yol açar.
+
+---
+
+## 5. Örnek Çıktı
+
+```
+[+] https://webmail.hedefsite.com:443 - VULNERABLE (CVE-2020-35730)
 [-] https://webmail2.hedefsite.com:443 - Secure
+```
 
-----------
-Geliştirici: Ebubekir Baştar
-GitHub: github.com/ebubekirbastama
+---
+
+## Geliştirici
+
+Ebubekir Baştar  
+[GitHub Profili](https://github.com/ebubekirbastama)
+
+---
+
+**GitHub Repo:**  
+https://github.com/ebubekirbastama/RoundcubeVulnScanner
+```
+
+---
+
+İstersen ayrıca dosyayı Markdown olarak da hazırlayıp gönderebilirim. Başka düzenleme veya ekleme ister misin?
