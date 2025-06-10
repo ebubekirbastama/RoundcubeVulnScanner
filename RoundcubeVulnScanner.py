@@ -124,7 +124,7 @@ class ScannerThread(QThread):
                     })
                     
                     if response.status_code == 200 and 'VULN_TEST_' in response.text:
-                        md5_check = 'd8a5c2a1fbd9c4e7a7f1a5a2d8b5c2a'
+                        md5_check = '7be3290560814f0a5681d7e303eee02e'
                         if md5_check in response.text:
                             return (target, True, f"Vulnerable (RCE via {endpoint})")
                         return (target, True, f"Potential vulnerability (unverified response via {endpoint})")
